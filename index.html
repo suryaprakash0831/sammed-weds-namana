@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-hmQWiJdQUU9OByn8iAiQ+PMHsCApFmocvYKXjnjiwxw='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self' https://fonts.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-dCNP6EYqxp0MP/PKbLqgraiC/WXHjMdSLul4NmLs0dg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self' https://fonts.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Sammed Jain M.S. &amp; Namana Jain T.R. — Shubha Vivaha</title>
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
@@ -819,6 +819,7 @@
 
       <div class="invite-couple" id="ic-bride">Namana Jain T.R.</div>
       <div class="invite-par" id="ic-bp">Daughter of Smt. Nandakumari &amp; Sri T.P. Rathnakara, Tumkur</div>
+      <div class="invite-par" id="ic-brother"></div>
       <div class="invite-grand" id="ic-bgp" style="display: none;"></div>
     </section>
 
@@ -921,7 +922,8 @@ const CONFIG = {
   groomParents: "Smt. Jayapadma & Sri S.P. Sunilkumar",
   groomGrand: "Smt. H.A. Veenadevi & Lt. Sri S.R. Parshwanathaiah",
   address: "No. 428, \u201cPadmakrupa\u201d, Udayagiri, 2nd Stage, Mysore",
-  brideParents: "Smt. Nandakumari & Sri T.P. Rathnakara Sister of Namith Jain, Tumkur",
+  brideParents: "Smt. Nandakumari & Sri T.P. Rathnakara, Tumkur",
+  brideBrother: "Namith Jain, Tumkur",
   brideGrand: "",
 
   inviteIntro: "We solicit your gracious presence with family and friends on the occasion of the marriage of our son.",
@@ -1056,6 +1058,7 @@ function setRelation(id, prefix, value){
   else el.style.display='none';
 }
 setRelation('ic-bp',  CONFIG.brideRelation,      CONFIG.brideParents);
+setRelation('ic-brother', 'Sister of ', CONFIG.brideBrother);
 setRelation('ic-gp',  CONFIG.groomRelation,      CONFIG.groomParents);
 setRelation('ic-bgp', CONFIG.brideGrandRelation, CONFIG.brideGrand);
 setRelation('ic-ggp', CONFIG.groomGrandRelation, CONFIG.groomGrand);
